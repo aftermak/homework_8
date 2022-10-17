@@ -53,16 +53,15 @@ function secondRecursion (obj) {
 };
 console.log(secondRecursion(obj));
 
-
 function thirdRecursion (obj){
     const object = Object.values(obj);
     let result = '';
     for (letter of object)
-    if (typeof letter === 'string' && letter === letter.toUpperCase()){
-        result += letter
-    } else if (letter && typeof letter === 'object'){
-       result += thirdRecursion(letter)
-    }
+      if (typeof letter === 'string' && letter === letter.toUpperCase()){
+          result += letter
+      } else if (letter && typeof letter === 'object'){
+        result += thirdRecursion(letter)
+      }
     return result
 }
 console.log(thirdRecursion(obj))
